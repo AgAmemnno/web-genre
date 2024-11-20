@@ -1277,7 +1277,7 @@ button:-moz-focusring,
 */
 .w3-red, .w3-hover-red:hover {
   color: #fff !important;
-  background-color: #f44336 !important;
+  background-color: #f0746b !important;
 }
 
 .w3-pink, .w3-hover-pink:hover {
@@ -1426,7 +1426,7 @@ button:-moz-focusring,
 }
 
 .w3-text-red, .w3-hover-text-red:hover {
-  color: #f44336 !important;
+  color: #f0746b !important;
 }
 .w3-text-pink, .w3-hover-text-pink:hover {
   color: #e91e63 !important;
@@ -1505,7 +1505,7 @@ button:-moz-focusring,
 }
 
 .w3-border-red, .w3-hover-border-red:hover {
-  border-color: #f44336 !important;
+  border-color: #f0746b !important;
 }
 .w3-border-pink, .w3-hover-border-pink:hover {
   border-color: #e91e63 !important;
