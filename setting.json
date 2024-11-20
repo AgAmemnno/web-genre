@@ -1,0 +1,26 @@
+{
+    "liveSassCompile.settings.formats":[
+       {
+           "format": "expanded",
+           "extensionName": ".css",
+           "savePath": "/public/css"
+       },
+   ],
+   "liveSassCompile.settings.includeItems": [
+        "/css/w3.s[ac]ss",
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.partialsList" : [
+    "/css/!(w3).scss"
+    ],
+   "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**"
+   ],
+   "liveSassCompile.settings.autoprefix": [
+       "defaults"
+],
+"files.exclude": {
+    "**/.git": false
+}
+}
