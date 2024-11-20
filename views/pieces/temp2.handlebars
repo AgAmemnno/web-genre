@@ -1,0 +1,487 @@
+
+<script id="template2" type="text/x-handlebars-template">
+<style>
+/* // Pen by ArcSinDesign.com - Follow https://codepen.io/BoiseDigital/  https://codepen.io/BoiseDigital/pen/vKMgZg */
+html, body {
+  margin:0;
+  padding:0;
+  font-family:'Typo Grotesk',sans-serif;
+}
+
+#backgroundImage {
+  background-image:url('');
+  background-size:cover;
+  background-color:#111;
+  -o-transition:background 0.5s linear;
+  -ms-transition:background 0.5s linear;
+  -moz-transition:background 0.5s linear;
+  -webkit-transition:background 0.5s linear;
+  transition:background 0.5s linear;  
+}
+
+#areamain3 .half1:first-child h1 {
+  text-align:center;
+  margin-top:40vh;
+  font-size:4em;
+  font-weight:900;
+  color:inherit;
+  -o-transition:background 0.3s linear;
+  -ms-transition:background 0.3s linear;
+  -moz-transition:background 0.3s linear;
+  -webkit-transition:background 0.3s linear;
+  transition:background 0.3s linear;
+  color:#fff;
+  text-transform:uppercase;
+  text-shadow:9px 1px 0 rgba(0,0,0,0.42);
+}
+
+.half1{
+  width:40%;
+  box-sizing:border-box;
+  position:absolute;
+  top:0;
+  bottom:0;
+}
+.half2{
+  width 100%;
+  box-sizing:border-box;
+  position:absolute;
+  top:0;
+  bottom:0;
+}
+
+#solidBackground {
+  background-color:#1a1a1a;
+  color:#fff;
+  left:40%;
+  right:0;
+  -o-transition:background 0.5s linear;
+  -ms-transition:background 0.5s linear;
+  -moz-transition:background 0.5s linear;
+  -webkit-transition:background 0.5s linear;
+  transition:background 0.5s linear;
+  overflow-y:scroll;
+}
+
+#serviceContent {
+  padding:10%;
+  padding-left:275px;
+  line-height:1.5em;
+  padding-top:10px;
+  margin-top:0px;
+  opacity:1;
+  pointer-events:none;
+
+}
+
+#serviceContent div {
+  padding:5px 30px;
+  border-left:5px solid rgba(0,0,0,0.1);
+  margin-top:25px;
+}
+
+.fader {
+  -webkit-animation: fadeIn 0.6s infinite; /* Safari 4+ */
+  -moz-animation:    fadeIn 0.6s infinite; /* Fx 5+ */
+  -o-animation:      fadeIn 0.6s infinite; /* Opera 12+ */
+  animation:         fadeIn 0.6s infinite; 
+      -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0; margin-top:-50px;}
+  100% { opacity: 1; margin-top: 0; }
+}
+@-moz-keyframes fadeIn {
+  0%   { opacity: 0; margin-top:-50px;}
+  100% { opacity: 1; margin-top: 0; }
+}
+@-o-keyframes fadeIn {
+  0%   { opacity: 0; margin-top:-50px;}
+  100% { opacity: 1; margin-top: 0; }
+}
+@keyframes fadeIn {
+  0%   { opacity: 0; margin-top:-50px;}
+  100% { opacity: 1; margin-top: 0; }
+}
+
+.bounce {
+  color:#fff;
+  -o-transition:all 1.5s linear;
+  -ms-transition:all 1.5s linear;
+  -moz-transition:all 1.5s linear;
+  -webkit-transition:all 1.5s linear;
+  transition:all 1.5s linear;
+  -webkit-animation: bouncy 1s ease-in-out 1; /* Safari 4+ */
+  -moz-animation:    bouncy 1s ease-in-out 1; /* Fx 5+ */
+  -o-animation:      bouncy 1s ease-in-out 1; /* Opera 12+ */
+  animation:         bouncy 1s ease-in-out 1; 
+  -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+  animation-iteration-count: 1;
+
+}
+@-webkit-keyframes bouncy {
+  0%   { color:#f0e098 !important; margin-left:0%; }
+  25%   { color:#f0e098 !important; margin-left:5%; }
+  50%   { color:#f0e098 !important; margin-left:0%; }
+  75%   { color:#f0e098 !important; margin-left:2.5%; }
+  100% { color:#fff;margin-left:0%; }
+}
+@-moz-keyframes bouncy {
+  0%   { color:#f0e098 !important; margin-left:0%; }
+  25%   { color:#f0e098 !important; margin-left:5%; }
+  50%   { color:#f0e098 !important; margin-left:0%; }
+  75%   { color:#f0e098 !important; margin-left:2.5%; }
+  100% { color:#fff;margin-left:0%; }
+}
+@-o-keyframes bouncy {
+  0%   { color:#f0e098 !important; margin-left:0%; }
+  25%   { color:#f0e098 !important; margin-left:5%; }
+  50%   { color:#f0e098 !important; margin-left:0%; }
+  75%   { color:#f0e098 !important; margin-left:2.5%; }
+  100% { color:#fff;margin-left:0%; }
+}
+@keyframes bouncy {
+  0%   { color:#f0e098 !important; margin-left:0%;  }
+  25%   { color:#f0e098 !important; margin-left:5%; }
+  50%   { color:#f0e098 !important; margin-left:0%; }
+  75%   { color:#f0e098 !important; margin-left:2.5%; }
+  100% { color:#fff;margin-left:0%; }
+}
+
+
+.serviceNavigation {
+  list-style-type:none;
+  position:fixed;
+  left:40%;
+  top:0px;
+  width:245px;
+  /* Get rid of bottom attribute to make menu autoheight */
+  bottom:0;
+  padding-left:0;
+  /*box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.42);*/
+  border-right:3px solid rgba(0,0,0,0.21);
+  user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+}
+.serviceNavigation a {
+  text-decoration:none;
+  color:#fff;
+}
+.serviceNavigation h2 {
+  margin:0;
+  border-bottom:1px solid rgba(0,0,0,0.21);
+  text-transform:uppercase;
+  background-color:rgba(0,0,0,0.69);
+  font-size:16px;
+  letter-spacing:3px;
+  padding-left:15px;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-weight:900;
+}
+.service_select span {
+ width:0;
+  height:50px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100&0.21+0,0.42+99 */
+background: -moz-linear-gradient(45deg,  rgba(255,255,255,0.21) 0%, rgba(241,241,241,0.32) 50%, rgba(225,225,225,0.32) 51%, rgba(246,246,246,0.42) 99%, rgba(246,246,246,0.42) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(255,255,255,0.21) 0%,rgba(241,241,241,0.32) 50%,rgba(225,225,225,0.32) 51%,rgba(246,246,246,0.42) 99%,rgba(246,246,246,0.42) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(255,255,255,0.21) 0%,rgba(241,241,241,0.32) 50%,rgba(225,225,225,0.32) 51%,rgba(246,246,246,0.42) 99%,rgba(246,246,246,0.42) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36ffffff', endColorstr='#6bf6f6f6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-transition:all 0.3s ease-in-out;
+  border-top-right-radius:105px;
+  position:absolute;
+  left:0;
+}
+
+
+.service_select:hover span {
+  width:245px;
+  border-top-right-radius:0px;
+  pointer-events:none;
+  position:absolute;
+}
+
+.service_select {
+  width:100%;
+  height:auto;
+  -o-transition:all 0.3s linear;
+  -ms-transition:all 0.3s linear;
+  -moz-transition:all 0.3s linear;
+  -webkit-transition:all 0.3s linear;
+  transition:all 0.3s linear;
+  position:relative;
+}
+
+.serviceNavigation input[type="radio"]:checked + label   {
+  background-color:rgba(0,0,0,0) !important;
+  font-weight:900;
+}
+
+.serviceNavigation input[type="radio"]:checked + label + .sub-menu {
+  display:block;
+  height:100%;
+  max-height:300px;
+}
+.serviceNavigation input[type="radio"]:checked + label + .sub-menu li {
+  height:35px;
+  line-height:35px;
+}
+
+.sub-menu {
+  /*display:none;*/
+  overflow:hidden;
+  padding-left:0;
+  height:0%;
+  padding:0;
+  margin:0;
+  padding-left:0;
+  padding-top:0px;
+  padding-bottom:0px;
+  list-style-type:none;
+   -o-transition:all 0.3s linear;
+  -ms-transition:all 0.3s linear;
+  -moz-transition:all 0.3s linear;
+  -webkit-transition:all 0.3s linear;
+  transition:all 0.3s linear;
+  max-height:0px;
+}
+
+.sub-menu li {
+  width:100%;
+  list-style-type:none;
+  height:0;
+  vertical-align:middle;
+  padding-left:10px;
+  box-sizing:border-box;
+  white-space:nowrap;
+  overflow:hidden;
+  border-bottom:2px inset rgba(0,0,0,0.15);
+  text-transform:uppercase;
+  font-size:0.85em;
+  letter-spacing:1px;
+  font-weight:300;
+  background-color:rgba(0,0,0,0.1);
+  -o-transition:height 0.3s linear;
+  -ms-transition:height 0.3s linear;
+  -moz-transition:height 0.3s linear;
+  -webkit-transition:height 0.3s linear;
+  transition:height 0.3s linear;
+}
+
+.sub-menu li:hover {
+    background-color:rgba(0,0,0,0.42);
+  font-weight:900;
+}
+
+#areamain3 input[type="radio"] {
+  display:none;
+}
+
+#areamain3 input[type="radio"] + label {
+  background-color:rgba(42,42,42,0.42);
+  display:block;
+  padding-left:15px;
+  height:50px;
+  line-height:50px;
+  cursor:pointer;
+  border-bottom:1px solid rgba(0,0,0,0.21);
+}
+
+.sep {
+  border-bottom:1px dotted rgba(0,0,0,0.42);
+  display:block;
+  
+}
+
+.dull .focus p {
+  color:#fff;
+  -webkit-filter:blur(0px) !important;
+}
+.dull .focus h2 {
+  -webkit-filter:blur(0px) !important;
+  color:#fff !important;
+}
+
+.dull div.focus {
+  box-shadow:0 0 50px rgba(0,0,0,0.42);
+  background-color:rgba(0,0,0,0.01);
+  border-radius:15px;
+  border-left:5px solid rgba(0,0,0,0) !important;
+  -webkit-transition:box-shadow 0.3s linear;
+}
+
+.dull h2, .dull p, dull h1 {
+  -webkit-filter:blur(1px);
+  color:rgba(255,255,255,0.42);
+  -webkit-transition:color 0.3s linear;
+  -webkit-transition:filter 0.3s linear;
+}
+
+@media (min-width:720px) {
+  .titleFader {
+    -webkit-animation: fadeIn2 1.6s infinite; /* Safari 4+ */
+  -moz-animation:    fadeIn2 1.6s infinite; /* Fx 5+ */
+  -o-animation:      fadeIn2 1.6s infinite; /* Opera 12+ */
+  animation:         fadeIn2 1.6s infinite; 
+      -webkit-animation-iteration-count: 1; /* Chrome, Safari, Opera */
+    animation-iteration-count: 1;
+  
+}
+
+@-webkit-keyframes fadeIn2 {
+  0%   { opacity: 0; margin-top:-5vh;filter: blur(5px);}
+  100% { opacity: 1; margin-top: 40vh;filter: blur(0px); }
+}
+@-moz-keyframes fadeIn2 {
+  0%   { opacity: 0; margin-top:-5vh;filter: blur(5px);}
+  100% { opacity: 1; margin-top: 40vh;filter: blur(0px); }
+}
+@-o-keyframes fadeIn2 {
+  0%   { opacity: 0; margin-top:-5vh;filter: blur(5px);}
+  100% { opacity: 1; margin-top: 40vh;filter: blur(0px); }
+}
+@keyframes fadeIn2 {
+  0%   { opacity: 0; margin-top:-5vh;filter: blur(5px);}
+  100% { opacity: 1; margin-top: 40vh;filter: blur(0px); }
+}
+
+}
+
+@media (max-width:720px) {
+  #bacgkroundImage {
+    display:block !important;
+    width:100%;
+    position:relative !important;
+    left:0;
+    right:0;
+    top:0;
+    margin-top:0;
+    height:360px;
+        margin:0;
+  }
+  #solidBackground {
+    display:block !important;
+    width:100%;
+    position:relative !important;
+    left:0;
+    right:0;
+        margin:0;
+  }
+  .half1 {
+    width:100%;
+    position:relative;
+        margin:0;
+  }
+  .half2 {
+    width:100%;
+    position:relative;
+    margin:0;
+  }
+  .serviceNavigation {
+    position:relative !important;
+    width:100%;
+    left:0;
+    right:0;
+    margin:0;
+  }
+  #service_title {
+    margin:0 !important;
+  }
+  .service_select {
+    width:100%;
+    text-align:center;
+  }
+  .service_select:hover span {  
+    width:100%;
+  }
+  #serviceContent {
+    padding:25px !important;
+  }
+}
+
+
+</style>
+<!-- Pen by ArcSinDesign.com - Follow https://codepen.io/BoiseDigital -->
+<div id="areamain3">
+
+    <div class="half1" id="backgroundImage">
+    <h1 id="service_title">our services</h1>
+    </div>
+
+    
+    <div class="half2" id="solidBackground">
+    <div class="serviceNavigation">
+        <h2>&#151; Services</h2>
+    <div class="service_select">
+        <span></span><input type="radio" name="services" value="marketing" id="marketing" /><label onclick="javascript:service('marketing');" for="marketing">MARKETING</label>
+        <ul class="sub-menu">
+        <a href="#photo1" title="Jump to Section"><li onclick="javascript:highlight('photo1');" onmouseover="javascript:focusRead('photo1');" onmouseout="javsacript:focusRemove('photo1');">photo1</li></a>
+        <a href="#photo2" title="Jump to Section"><li onclick="javascript:highlight('photo2');" onmouseover="javascript:focusRead('photo2');" onmouseout="javsacript:focusRemove('photo2');">photo2</li></a>
+        <a href="#photo3" title="Jump to Section"><li onclick="javascript:highlight('photo3');" onmouseover="javascript:focusRead('photo3');" onmouseout="javsacript:focusRemove('photo3');">photo3</li></a>
+        <a href="#photo4" title="Jump to Section"><li onclick="javascript:highlight('photo4');" onmouseover="javascript:focusRead('photo4');" onmouseout="javsacript:focusRemove('photo4');">photo4</li></a>
+        <a href="#photo5" title="Jump to Section"><li onclick="javascript:highlight('photo5');" onmouseover="javascript:focusRead('photo5');" onmouseout="javsacript:focusRemove('photo5');">photo5</li></a>
+        </ul>
+    </div>
+    
+        
+    <div class="service_select">
+        
+        <span></span>
+    <input type="radio" name="services" value="creative" id="creative" /><label onclick="javascript:service('creative');" for="creative">CREATIVE</label>
+        <ul class="sub-menu">
+        <a href="#graphicDesign-container" title="Jump to Section">
+            <li onclick="javascript:highlight('graphicDesign');" onmouseover="javascript:focusRead('graphicDesign-container')" onmouseout="javsacript:focusRemove('graphicDesign-container');">Graphic Design</li>
+        </a>
+        <a href="#videoEditing-container" title="Jump to Section">
+            <li onclick="javascript:highlight('videoEditing');" onmouseover="javascript:focusRead('videoEditing-container')" onmouseout="javsacript:focusRemove('videoEditing-container');">Video Editing</li>
+        </a>
+        <a href="#photography-container" title="Jump to Section">
+            <li onclick="javascript:highlight('photography');" onmouseover="javascript:focusRead('photography-container')" onmouseout="javsacript:focusRemove('photography-container');">Photography</li>
+        </a>
+        <a href="#stock-container" title="Jump to Section">
+            <li onclick="javascript:highlight('stock');" onmouseover="javascript:focusRead('stock-container')" onmouseout="javsacript:focusRemove('stock-container');">Stock</li>
+        </a>
+        <a href="#content-container" title="Jump to Section">
+            <li onclick="javascript:highlight('content');" onmouseover="javascript:focusRead('content-container')" onmouseout="javsacript:focusRemove('content-container');">Content Generation</li>
+        </a>
+
+        
+        
+        
+        
+        
+        </ul>
+    </div>
+
+        
+        <div class="service_select">
+        <span></span>
+    <input type="radio" name="services" value="branding" id="branding" /><label onclick="javascript:service('branding');" for="branding">BRANDING</label>  
+        <ul class="sub-menu">
+        <a href="#web-container" title="Jump to Section">
+            <li onclick="javascript:highlight('web');" onmouseover="javascript:focusRead('web-container')" onmouseout="javsacript:focusRemove('web-container');">Web Development</li>
+        </a>
+        <a href="#brand-container" title="Jump to Section">
+            <li onclick="javascript:highlight('brand');" onmouseover="javascript:focusRead('brand-container')" onmouseout="javsacript:focusRemove('brand-container');">Brand Identity</li>
+        </a>
+        <a href="#seo-container" title="Jump to Section">
+            <li onclick="javascript:highlight('seo');" onmouseover="javascript:focusRead('seo-container')" onmouseout="javsacript:focusRemove('seo-container');">Search Optimization</li>
+        </a>      
+        </ul>
+        </div>
+    </div>
+    
+    <div id="serviceContent" class="fader"><h1><span class="icon-office"></span> Services</h1><p>Select a service to learn more. </p>
+    </div>      
+    
+    </div>
+
+</div>
+
+</script>
+<script src="js/temp2.js"></script>

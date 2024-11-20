@@ -245,3 +245,77 @@ $u: px;
         @content;
     }
 }
+
+//half
+@mixin halfdisplay($arg) {
+    &-left{
+        width: $arg;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    &-right{
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        &.solid-bg{
+            background-color: #1a1a1a;
+            color: #fff;
+            left: $arg;
+            right: 0;
+            -o-transition: background 0.5s linear;
+            -ms-transition: background 0.5s linear;
+            -moz-transition: background 0.5s linear;
+            -webkit-transition: background 0.5s linear;
+            transition: background 0.5s linear;
+            overflow-y: scroll;
+        }
+        > .half-navigation {
+            list-style-type: none;
+            position: fixed;
+            left: $arg;
+            top: 0px;
+            width: 245px;
+            bottom: 0;
+            padding-left: 0;
+            /* box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.42); */
+            border-right: 3px solid rgba(0, 0, 0, 0.21);
+            user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+        > .half-content {
+            padding:10%;
+            padding-left:275px;
+            line-height:1.5em;
+            padding-top:10px;
+            margin-top:0px;
+            opacity:1;
+            pointer-events:none;
+            div {
+                padding:5px 30px;
+                border-left:5px solid rgba(0,0,0,0.1);
+                margin-top:25px;
+              }
+          }
+          
+
+        input[type="radio"] {
+            display:none;
+          }
+          
+        input[type="radio"] + label {
+            background-color:rgba(42,42,42,0.42);
+            display:block;
+            padding-left:15px;
+            height:50px;
+            line-height:50px;
+            cursor:pointer;
+            border-bottom:1px solid rgba(0,0,0,0.21);
+          }
+    }
+}

@@ -12,7 +12,8 @@ const router = express.Router();
 
 // Routing 
 router.get('/', (req, res) => {
-
+    res.render('index');
+    /*
     res.render('index', {
         title: 'Oragamura',
         name: 'Carlおじさん(カールおらが村出身)',
@@ -27,7 +28,7 @@ router.get('/', (req, res) => {
 
         test: '<h3>Welcome to New Orlands</h3>',
     });
-
+    */
 });
 
 app.use('/', router);

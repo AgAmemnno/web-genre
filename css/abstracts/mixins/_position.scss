@@ -1,0 +1,15 @@
+@mixin footer_pos($arg: fix){
+    @if $arg == fix {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    } @else if $arg == right {
+        text-align: right!important;
+    } @else if $arg == justify {
+        text-align: justify;
+    } @else if $arg == center {
+        text-align: center;
+    } @else {
+        @error "Align '#{$arg}' must be one of these values: left, right, justify or center.";
+    }
+}

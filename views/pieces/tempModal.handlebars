@@ -1,11 +1,11 @@
     <script id="templateModal" type="text/x-handlebars-template">
-      <div id="{{ID}}" class="w3-modal">
+      <div id="\{{ID}}" class="w3-modal">
         <div class="w3-modal-content">
           <div class="w3-container">
-            <span onclick="document.getElementById('{{ID}}').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-              {{#each msgs}}
-                  <p>{{value}}</p>
-              {{/each}}
+            <span onclick="document.getElementById('\{{ID}}').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+              \{{#each msgs}}
+                  <p>\{{value}}</p>
+              \{{/each}}
           </div>
         </div>
       </div>

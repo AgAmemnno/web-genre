@@ -5,3 +5,9 @@ body {
     font-size: $font-size__primary;
     line-height: $line-height__primary;
 }
+
+
+
+.#{$b}-layout { 
+    @include halfdisplay($layout-half);
+}

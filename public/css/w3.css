@@ -88,6 +88,70 @@ body {
   line-height: 1.5;
 }
 
+.w3-layout-left {
+  width: 60%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.w3-layout-right {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.w3-layout-right.solid-bg {
+  background-color: #1a1a1a;
+  color: #fff;
+  left: 60%;
+  right: 0;
+  transition: background 0.5s linear;
+  overflow-y: scroll;
+}
+.w3-layout-right > .half-navigation {
+  list-style-type: none;
+  position: fixed;
+  left: 60%;
+  top: 0px;
+  width: 245px;
+  bottom: 0;
+  padding-left: 0;
+  /* box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.42); */
+  border-right: 3px solid rgba(0, 0, 0, 0.21);
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.w3-layout-right > .half-content {
+  padding: 10%;
+  padding-left: 275px;
+  line-height: 1.5em;
+  padding-top: 10px;
+  margin-top: 0px;
+  opacity: 1;
+  pointer-events: none;
+}
+.w3-layout-right > .half-content div {
+  padding: 5px 30px;
+  border-left: 5px solid rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
+}
+.w3-layout-right input[type=radio] {
+  display: none;
+}
+.w3-layout-right input[type=radio] + label {
+  background-color: rgba(42, 42, 42, 0.42);
+  display: block;
+  padding-left: 15px;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+}
+
 /*
 ** Hrule
 */
@@ -1198,6 +1262,48 @@ button:-moz-focusring,
   }
 }
 
+.w3-bounce {
+  color: #fff;
+  transition: all 1.5s linear; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+  animation: bouncy 1s ease-in-out 1; /* Chrome, Safari, Opera */
+  animation-iteration-count: 1;
+}
+@keyframes bouncy {
+  0% {
+    color: #f0e098 !important;
+    margin-left: 0%;
+  }
+  25% {
+    color: #f0e098 !important;
+    margin-left: 5%;
+  }
+  50% {
+    color: #f0e098 !important;
+    margin-left: 0%;
+  }
+  75% {
+    color: #f0e098 !important;
+    margin-left: 2.5%;
+  }
+  100% {
+    color: #fff;
+    margin-left: 0%;
+  }
+}
+.fader { /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
+  animation: fadeIn 0.6s infinite; /* Chrome, Safari, Opera */
+  animation-iteration-count: 1;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
 /*
 ** Effects
 */
@@ -1832,4 +1938,120 @@ button:-moz-focusring,
   .w3-sidebar.w3-collapse {
     display: none;
   }
+}
+
+/*
+** Navis
+*/
+.half-navigation a {
+  text-decoration: none;
+  color: #fff;
+}
+.half-navigation h2 {
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.69);
+  font-size: 16px;
+  letter-spacing: 3px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 900;
+}
+.half-navigation input[type=radio]:checked + label {
+  background-color: rgba(0, 0, 0, 0) !important;
+  font-weight: 900;
+}
+.half-navigation input[type=radio]:checked + label + .sub-menu {
+  display: block;
+  height: 100%;
+  max-height: 300px;
+}
+.half-navigation input[type=radio]:checked + label + .sub-menu li {
+  height: 35px;
+  line-height: 35px;
+}
+.half-navigation .half-select {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s linear;
+  position: relative;
+}
+.half-navigation .half-select span {
+  width: 0;
+  height: 50px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100&0.21+0,0.42+99 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.21) 0%, rgba(241, 241, 241, 0.32) 50%, rgba(225, 225, 225, 0.32) 51%, rgba(246, 246, 246, 0.42) 99%, rgba(246, 246, 246, 0.42) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#36ffffff", endColorstr="#6bf6f6f6",GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  -webkit-transition: all 0.3s ease-in-out;
+  border-top-right-radius: 105px;
+  position: absolute;
+  left: 0;
+}
+.half-navigation .half-select:hover span {
+  width: 245px;
+  border-top-right-radius: 0px;
+  pointer-events: none;
+  position: absolute;
+}
+.half-navigation .half-select .sub-menu {
+  /*display:none;*/
+  overflow: hidden;
+  padding-left: 0;
+  height: 0%;
+  padding: 0;
+  margin: 0;
+  padding-left: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  list-style-type: none;
+  transition: all 0.3s linear;
+  max-height: 0px;
+}
+.half-navigation .half-select .sub-menu li {
+  width: 100%;
+  list-style-type: none;
+  height: 0;
+  vertical-align: middle;
+  padding-left: 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  border-bottom: 2px inset rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+  font-weight: 300;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: height 0.3s linear;
+}
+.half-navigation .half-select .sub-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.42);
+  font-weight: 900;
+}
+
+.dull .focus p {
+  color: #fff;
+  -webkit-filter: blur(0px) !important;
+}
+
+.dull .focus h2 {
+  -webkit-filter: blur(0px) !important;
+  color: #fff !important;
+}
+
+.dull div.focus {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.42);
+  background-color: rgba(0, 0, 0, 0.01);
+  border-radius: 15px;
+  border-left: 5px solid rgba(0, 0, 0, 0) !important;
+  -webkit-transition: box-shadow 0.3s linear;
+}
+
+.dull h2, .dull p, dull h1 {
+  -webkit-filter: blur(1px);
+  color: rgba(255, 255, 255, 0.42);
+  -webkit-transition: color 0.3s linear;
+  -webkit-transition: filter 0.3s linear;
 }

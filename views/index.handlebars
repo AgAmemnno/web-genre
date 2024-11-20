@@ -1,14 +1,70 @@
-    <hr>
-    <hr>
-    <hr>
+<div class="w3-layout-left" id="backgroundImage">
+    <h1 id="genre-title">our genre</h1>
     <div id="target"></div>
-    <hr>
-    <hr>
-    <div id="default"></div>
-    <hr>
-    <hr>
-    
+</div>
 
-<div id="template-container" style="display:none;"></div>
+<div class="w3-layout-right solid-bg" name="half-nav">
+    <div class="half-navigation">
+        <h2>&#151; Genre</h2>
+        <div class="half-select">
+            <span></span>
+            <input type="radio" name="genre" value="photo" id="photo" /><label onclick="javascript:genre('photo');" for="photo">PHOTO</label>
+            <ul class="sub-menu">
+                <a href="#photo1" title="Jump to Section"><li onclick="javascript:highlight('photo1');" onmouseover="javascript:focusRead('photo1');" onmouseout="javsacript:focusRemove('photo1');">photo1</li></a>
+                <a href="#photo2" title="Jump to Section"><li onclick="javascript:highlight('photo2');" onmouseover="javascript:focusRead('photo2');" onmouseout="javsacript:focusRemove('photo2');">photo2</li></a>
+                <a href="#photo3" title="Jump to Section"><li onclick="javascript:highlight('photo3');" onmouseover="javascript:focusRead('photo3');" onmouseout="javsacript:focusRemove('photo3');">photo3</li></a>
+                <a href="#photo4" title="Jump to Section"><li onclick="javascript:highlight('photo4');" onmouseover="javascript:focusRead('photo4');" onmouseout="javsacript:focusRemove('photo4');">photo4</li></a>
+                <a href="#photo5" title="Jump to Section"><li onclick="javascript:highlight('photo5');" onmouseover="javascript:focusRead('photo5');" onmouseout="javsacript:focusRemove('photo5');">photo5</li></a>
+            </ul>
+        </div>
+        <div class="half-select">
+            
+            <span></span>
+        <input type="radio" name="genre" value="creative" id="creative" /><label onclick="javascript:genre('creative');" for="creative">CREATIVE</label>
+            <ul class="sub-menu">
+            <a href="#graphicDesign-container" title="Jump to Section">
+                <li onclick="javascript:highlight('graphicDesign');" onmouseover="javascript:focusRead('graphicDesign-container')" onmouseout="javsacript:focusRemove('graphicDesign-container');">Graphic Design</li>
+            </a>
+            <a href="#videoEditing-container" title="Jump to Section">
+                <li onclick="javascript:highlight('videoEditing');" onmouseover="javascript:focusRead('videoEditing-container')" onmouseout="javsacript:focusRemove('videoEditing-container');">Video Editing</li>
+            </a>
+            <a href="#photography-container" title="Jump to Section">
+                <li onclick="javascript:highlight('photography');" onmouseover="javascript:focusRead('photography-container')" onmouseout="javsacript:focusRemove('photography-container');">Photography</li>
+            </a>
+            <a href="#stock-container" title="Jump to Section">
+                <li onclick="javascript:highlight('stock');" onmouseover="javascript:focusRead('stock-container')" onmouseout="javsacript:focusRemove('stock-container');">Stock</li>
+            </a>
+            <a href="#content-container" title="Jump to Section">
+                <li onclick="javascript:highlight('content');" onmouseover="javascript:focusRead('content-container')" onmouseout="javsacript:focusRemove('content-container');">Content Generation</li>
+            </a>
+            </ul>
+        </div>
+        <div class="half-select">
+        <span></span>
+        <input type="radio" name="genre" value="branding" id="branding" /><label onclick="javascript:genre('branding');" for="branding">BRANDING</label>  
+        <ul class="sub-menu">
+        <a href="#web-container" title="Jump to Section">
+            <li onclick="javascript:highlight('web');" onmouseover="javascript:focusRead('web-container')" onmouseout="javsacript:focusRemove('web-container');">Web Development</li>
+        </a>
+        <a href="#brand-container" title="Jump to Section">
+            <li onclick="javascript:highlight('brand');" onmouseover="javascript:focusRead('brand-container')" onmouseout="javsacript:focusRemove('brand-container');">Brand Identity</li>
+        </a>
+        <a href="#seo-container" title="Jump to Section">
+            <li onclick="javascript:highlight('seo');" onmouseover="javascript:focusRead('seo-container')" onmouseout="javsacript:focusRemove('seo-container');">Search Optimization</li>
+        </a>      
+        </ul>
+        </div>
+    </div>
+    
+    <div id="genre-content" class="fader half-content"><h1><span class="icon-office"></span> Genres</h1><p>Select a genre to learn more. </p>
+    </div>    
+</div>
+
+
+ <!--   
+<div id="target"></div>
+-->
+
+<div id="default" style="display:none;"></div>
 <div id="modal" class="w3-container">
 </div>
